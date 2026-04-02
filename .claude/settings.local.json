@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip -o \"System-RemoveBloatwareAppX.zip\" -d \"./System-RemoveBloatwareAppX_extracted\")",
+      "Bash(ls \"C:\\\\Users\\\\jhankinson\\\\Downloads\"/*.ps1)",
+      "Bash(ls \"C:\\\\Users\\\\jhankinson\\\\Downloads\"/*.zip)",
+      "Bash(ls \"C:\\\\Users\\\\jhankinson\\\\Downloads\"/*.txt)",
+      "Bash(xargs grep:*)",
+      "Read(//c/Temp/IntuneLogReports/AP_20260326-082245/Info/**)",
+      "Bash(ls \"C:\\\\Temp\\\\IntuneLogReports\\\\AP_20260326-164858\\\\HallCounty\\\\AppLogs\"\" 2>/dev/null || echo \"Directory not found or empty \")",
+      "Read(//c/Temp/IntuneLogReports/**)",
+      "WebSearch",
+      "Bash(find C:/Temp/IntuneLogReports/AP_20260327-113119/ -name *Diag* -o -name *Bloatware* -o -name *AppMarker* -o -name *.tag)",
+      "Read(//c/Users/jhankinson/.claude/projects 2>/dev/**)",
+      "Read(//c/Users/jhankinson/.claude/projects//**)",
+      "Bash(powershell.exe -NoProfile -NonInteractive -File \"C:\\\\Temp\\\\hexdump.ps1\")",
+      "Bash(powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\\\Temp\\\\hexdump.ps1\")",
+      "Bash(powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\\\Temp\\\\findunclosed.ps1\")",
+      "Bash(powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\\\Temp\\\\parsecheck.ps1\")",
+      "Bash(powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\\\Temp\\\\findstring.ps1\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\jhankinson\\.claude\\projects\\c--Users-jhankinson-OneDrive---Hall-County-Government-Intune-Files",
+      "C:\\Temp"
+    ]
+  }
+}
