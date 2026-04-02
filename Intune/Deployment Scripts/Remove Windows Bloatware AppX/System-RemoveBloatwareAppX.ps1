@@ -11,7 +11,7 @@ Else {
 
 $templateFilePath = "C:\ProgramData\Debloat"
 
-$zipUrl = "https://github.com/jhankinson-hallco/hallcounty/blob/main/Intune/Deployment%20Scripts/Remove%20Windows%20Bloatware%20AppX/Debloat/RemoveBloat.zip"
+$zipUrl = "https://github.com/jhankinson-hallco/hallcounty/tree/main/Intune/Deployment%20Scripts/Remove%20Windows%20Bloatware%20AppX/Debloat/RemoveBloat.zip"
 $zipPath = "$templateFilePath\RemoveBloat.zip"
 $extractPath = "$templateFilePath"
 
