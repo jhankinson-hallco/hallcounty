@@ -1,27 +1,22 @@
 $DebloatFolder = "C:\ProgramData\Debloat"
-If (Test-Path $DebloatFolder) {
-    Write-Output "$DebloatFolder exists. Skipping."
+$ZipUrl        = "https://github.com/jhankinson-hallco/hallcounty/raw/refs/heads/main/Intune/Deployment%20Scripts/Remove%20Windows%20Bloatware%20AppX/Debloat/RemoveBloat.zip"
+$ZipPath       = Join-Path $DebloatFolder "RemoveBloat.zip"
+$ScriptPath    = Join-Path $DebloatFolder "removebloat.ps1"
+$PowerShellExe = Join-Path $env:SystemRoot "System32\WindowsPowerShell\v1.0\powershell.exe"
+
+# Create working folder if missing
+if (-not (Test-Path -LiteralPath $DebloatFolder)) {
+    New-Item -Path $DebloatFolder -ItemType Directory -Force | Out-Null
 }
-Else {
-    Write-Output "The folder '$DebloatFolder' doesn't exist. This folder will be used for storing logs created after the script runs. Creating now."
-    Start-Sleep 1
-    New-Item -Path "$DebloatFolder" -ItemType Directory
-    Write-Output "The folder $DebloatFolder was successfully created."
+
+# Download and extract package
+Invoke-WebRequest -Uri $ZipUrl -OutFile $ZipPath
+Expand-Archive -Path $ZipPath -DestinationPath $DebloatFolder -Force
+
+# Confirm extracted script exists
+if (-not (Test-Path -LiteralPath $ScriptPath)) {
+    throw "removebloat.ps1 was not found after extraction: $ScriptPath"
 }
 
-$templateFilePath = "C:\ProgramData\Debloat"
-
-$zipUrl = "https://github.com/jhankinson-hallco/hallcounty/raw/refs/heads/main/Intune/Deployment%20Scripts/Remove%20Windows%20Bloatware%20AppX/Debloat/RemoveBloat.zip"
-$zipPath = "$templateFilePath\RemoveBloat.zip"
-$extractPath = "$templateFilePath"
-
-
-Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath
-Expand-Archive -Path $zipPath -DestinationPath $extractPath -Force
-
-
-##Populate between the speechmarks any apps you want to whitelist, comma-separated
-$arguments = ' -customwhitelist ""'
-$pathwithfile = "$templateFilePath\removebloat.ps1"
-
-invoke-expression -Command "$pathwithfile $arguments"
+# Run extracted script in a new PowerShell process
+& $PowerShellExe -NoProfile -ExecutionPolicy Bypass -File $ScriptPath -customwhitelist ""
