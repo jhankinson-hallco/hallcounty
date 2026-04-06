@@ -19,4 +19,4 @@ if (-not (Test-Path -LiteralPath $ScriptPath)) {
 }
 
 # Run extracted script in a new PowerShell process
-& $PowerShellExe -NoProfile -ExecutionPolicy Bypass -File $ScriptPath -customwhitelist ""
+& $PowerShellExe -NoProfile -ExecutionPolicy Bypass -File $ScriptPath
