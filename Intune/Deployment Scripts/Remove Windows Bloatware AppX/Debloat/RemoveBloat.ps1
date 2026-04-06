@@ -118,7 +118,6 @@ $WhitelistedApps = @(
     'Microsoft.WindowsNotepad',
     'Microsoft.CompanyPortal',
     'Microsoft.ScreenSketch',
-    'Microsoft.Paint3D',
     'Microsoft.WindowsCalculator',
     'Microsoft.WindowsStore',
     'Microsoft.Windows.Photos',
@@ -151,7 +150,8 @@ $WhitelistedApps = @(
     'Microsoft.HEVCVideoExtension',
     'Microsoft.AV1VideoExtension',
     'Microsoft.RawImageExtension',
-    'Microsoft.AVCEncoderVideoExtension'
+    'Microsoft.AVCEncoderVideoExtension',
+    'Microsoft.RemoteDesktop'
 )
 ##If $customwhitelist is set, split on the comma and add to whitelist
 if ($customwhitelist) {
@@ -243,6 +243,7 @@ $Bloatware = @(
     "Adobe Creative Cloud All Apps 2-month membership"
     "AppUp.IntelGraphicsExperience"
     "C27EB4BA.DropboxOEM*"
+    "Clipchamp.Clipchamp"
     "Disney.37853FC22B2CE"
     "DolbyLaboratories.DolbyAccess"
     "DolbyLaboratories.DolbyAudio"
@@ -267,6 +268,7 @@ $Bloatware = @(
     "Microsoft.MicrosoftSolitaireCollection"
     "Microsoft.MicrosoftStickyNotes"
     "Microsoft.MixedReality.Portal"
+    "Microsoft.MixedRealityLink"
     "Microsoft.MPEG2VideoExtension"
     "Microsoft.News"
     "Microsoft.Office.Lens"
@@ -278,8 +280,8 @@ $Bloatware = @(
     "Microsoft.People"
     "Microsoft.PowerAutomateDesktop"
     "Microsoft.PowerAutomateDesktopCopilotPlugin"
+    "Microsoft.Paint3D"
     "Microsoft.Print3D"
-    "Microsoft.RemoteDesktop"
     "Microsoft.SkypeApp"
     "Microsoft.SysinternalsSuite"
     "Microsoft.Teams"
@@ -301,6 +303,7 @@ $Bloatware = @(
     "Microsoft.ZuneVideo"
     "MicrosoftCorporationII.MicrosoftFamily"
     "MicrosoftCorporationII.QuickAssist"
+    "Microsoft.YourPhone"
     "MicrosoftWindows.CrossDevice"
     "MirametrixInc.GlancebyMirametrix"
     "MSTeams"
