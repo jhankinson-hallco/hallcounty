@@ -1,0 +1,16 @@
+Google Chrome Enterprise Win32 App Package
+===========================================
+
+Package Version:    1.0.0
+Created Date:       2026-01-29
+Last Modified:      2026-01-29
+
+Included Components:
+- Google Chrome Enterprise (64-bit) - GoogleChromeStandaloneEnterprise64.msi
+- Legacy Browser Support Extension - LegacyBrowserSupport_8.1.0.0_en_x64.msi
+- Endpoint Verification Extension - EndpointVerification_2.0.3.msi
+- ADMX/ADM Policy Templates - Configuration\admx\, Configuration\adm\
+- Initial Preferences Template - Configuration\initial_preferences.file
+- macOS Policy Template - Configuration\com.google.Chrome.plist
+
+Update this file when updating the package or included installers.

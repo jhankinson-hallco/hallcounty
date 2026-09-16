@@ -1,0 +1,1 @@
+reg add HKLM\SOFTWARE\Centegix\Settings /v playResponderBeep /t REG_SZ /d 1

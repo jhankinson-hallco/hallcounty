@@ -1,0 +1,41 @@
+﻿<Configuration>
+  <Add OfficeClientEdition="64" Channel="MonthlyEnterprise">
+    <Product ID="O365ProPlusRetail">
+      <Language ID="MatchOS" Fallback="en-us" />
+      <!--
+        Excluded apps:
+          Access             - specialty database tool; deployed separately per department
+          Groove             - legacy OneDrive for Business sync client; not needed
+          Lync               - legacy Skype for Business client; not needed
+          Outlook            - classic (Win32) Outlook excluded from default baseline;
+                               deploy separately for departments that require it
+          Publisher          - specialty publishing tool; deployed separately per department
+
+        NOTE: Teams is NOT excluded here. Teams (both classic C2R bundle and the
+        Microsoft Teams app) will install as part of this suite unless excluded.
+        If Teams is managed as a separate Intune app (e.g., new Teams via Store),
+        add <ExcludeApp ID="Teams" /> to prevent C2R Teams from being installed
+        alongside the managed version.
+
+        NOTE: OutlookForWindows is NOT excluded here, so new Outlook is allowed
+        to install.
+      -->
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="Outlook" />
+      <ExcludeApp ID="Publisher" />
+    </Product>
+  </Add>
+  <!--
+    RemoveMSI: removes any legacy MSI-based Office installation found on the device
+    before the new C2R install completes. The M365 Pre-Cleanup Win32 app handles
+    MSI removal as a dependency before this app runs, so RemoveMSI is intentionally
+    redundant here - it acts as a safety net for any MSI remnant that Pre-Cleanup
+    may have missed. It does not slow down the install on clean targets.
+  -->
+  <RemoveMSI />
+  <Display Level="None" AcceptEULA="TRUE" />
+  <Logging Level="Standard" Path="C:\IntuneAppLogs" />
+  <Property Name="FORCEAPPSHUTDOWN" Value="TRUE" />
+</Configuration>

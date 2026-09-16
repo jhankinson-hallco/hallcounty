@@ -1,0 +1,13 @@
+<Configuration>
+  <!--
+    ODT removal configuration for all C2R Office products.
+    Remove All="TRUE" uninstalls every Click-to-Run product on the machine
+    regardless of channel, version, or product ID.
+
+    Logging writes ODT diagnostic output to C:\IntuneAppLogs.
+    The ODT log file will be named Setup<timestamp>.log in that folder.
+  -->
+  <Remove All="TRUE" />
+  <Display Level="None" AcceptEULA="TRUE" />
+  <Logging Level="Standard" Path="C:\IntuneAppLogs" />
+</Configuration>

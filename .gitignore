@@ -5,8 +5,22 @@ AI Scripting Prompt.txt
 App Description Metadata Template.txt
 System Scripts/Device Rename/
 
-# Vendor installer payload mirror (~67GB, not source; already in OneDrive)
-Software/
+# Fully-extracted vendor GIS runtime installs (ArcGIS Runtime, Mobile CAD
+# client bundles) - large third-party redistributables, not source
+Software/Mobile CAD/Mobile CAD Install Files/
+Software/Mobile CAD/MobileCAD-FR_Install/Mobile Client FD/
+Software/Mobile CAD/MobileCAD-SO_Install/Mobile Client SO/
+
+# Other vendor software payloads nested under Software/<App>/ deeper than the
+# usual <App>/(scripts) or <App>/PDQ/(scripts) layout - not authored scripts
+Software/Mitel Connect/Connect/
+Software/OnBase/Auto/
+Software/OnBase/Hyland Software/
+Software/OSMCT/mupdate/
+Software/Google Chrome Enterprise/Documentation/
+
+# Stray Visual Studio IDE cache, not software or scripts
+Software/.vs/
 
 # Diagnostic / log captures (transient output, not source)
 Logs/

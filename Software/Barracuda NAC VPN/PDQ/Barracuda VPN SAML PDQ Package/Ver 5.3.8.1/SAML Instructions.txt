@@ -1,0 +1,12 @@
+Steps to use SAML
+
+Download new barracuda client version because old version does not have SAML as an option.
+Open up the client and on the top left corner, click the sandwich (three bars; see image below)
+Click on "Manage Profiles"
+Select the profile user created to use the vpn.
+Click on "Edit Profile"
+Under General, Authentication Method > click "Username and Password." Options will appear.
+Select SAML
+Then click "Save" at the bottom.
+Go back to the client (where you put in your username and password)
+You should only see the option to connect and this option will take you to through the process to use SAML and MFA
