@@ -1,0 +1,36 @@
+.claude/
+Documentation/
+Inventory/
+AI Scripting Prompt.txt
+App Description Metadata Template.txt
+System Scripts/Device Rename/
+
+# Vendor installer payload mirror (~67GB, not source; already in OneDrive)
+Software/
+
+# Diagnostic / log captures (transient output, not source)
+Logs/
+
+# Sensitive internal device/network inventory (hostnames, internal IPs, locations)
+GoverTmpReport.txt
+
+# Real employee PII (AD usernames/names) and Autopilot hardware-hash exports - data dumps, not source
+Tools/Tool Scripts/AD Group User Report/
+Tools/Microsoft Intune Win32 Package Wrapper/38451407_AutoPilot.csv
+*.csv
+
+# Built packages and installer archives (never committed - see packaging standard)
+*.intunewin
+*.zip
+*.msi
+*.msix
+*.msixbundle
+*.msp
+*.cab
+*.iso
+*.7z
+*.dmg
+*.appx
+*.appxbundle
+*.exe
+!Tools/BGInfo.exe

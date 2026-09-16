@@ -1,0 +1,24 @@
+Policies Manageable in Microsoft Defender
+
+-----------------------------------
+
+Endpoint Policies:
+
+Windows Security Experience
+Microsoft Defender Antivirus
+Microsoft Defender Antivirus exclusions
+Attack Surface Reduction Rules
+Microsoft Defender Firewall
+Microsoft Defender Firewall Rules
+Defender Update controls
+Endpoint Detection and Response
+Device Control
+
+
+
+Windows Update Timescale
+
+-----------------------------------
+
+Security within 2 weeks
+Feature at my discretion

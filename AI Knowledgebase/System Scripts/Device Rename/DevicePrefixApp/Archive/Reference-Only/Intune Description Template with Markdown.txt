@@ -1,0 +1,13 @@
+## Dept Name Preset: Animal Control
+This app creates the **DevicePrefix.txt** file used by the **System (User) - Device Rename (R)** app to determine the correct computer name prefix.
+
+### What it does
+* Writes the prefix file: `DevicePrefix.txt`
+* Enables **System (User) - Device Rename (R)** to apply the correct department naming prefix
+
+### Deployment notes
+* This sets the prefix "SO-" for the Sheriff's Office department
+* Assign to **device groups** during **Autopilot**
+* Use the **department specific install command** for each assignment
+* **This app must install and complete before** `System (User) - Device Rename (R)` runs
+* Deploy through **device groups** (not user groups)

@@ -1,0 +1,23 @@
+{
+  "applyOnce": true,
+  "pinnedList": [
+    { "packagedAppId": "Microsoft.CompanyPortal_8wekyb3d8bbwe!App" },
+    { "desktopAppId": "Microsoft.SkyDrive.Desktop" },
+    { "desktopAppId": "Microsoft.Office.WINWORD.EXE.15" },
+    { "desktopAppId": "Microsoft.Office.EXCEL.EXE.15" },
+    { "desktopAppId": "Microsoft.Office.POWERPNT.EXE.15" },
+    { "desktopAppId": "MSEdge" },
+    { "desktopAppId": "Microsoft.Windows.Explorer" },
+    { "packagedAppId": "windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" },
+    { "packagedAppId": "Microsoft.WindowsNotepad_8wekyb3d8bbwe!App" },
+    { "packagedAppId": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App" }
+  ],
+  "taskbar": {
+    "pinnedList": [
+      { "packagedAppId": "Microsoft.CompanyPortal_8wekyb3d8bbwe!App" },
+      { "desktopAppId": "Microsoft.SkyDrive.Desktop" },
+      { "desktopAppId": "MSEdge" },
+      { "desktopAppId": "Microsoft.Windows.Explorer" }
+    ]
+  }
+}
